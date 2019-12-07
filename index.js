@@ -12,6 +12,7 @@ io.sockets.on('connection', function(socket) {
         socket.username = username;
         io.emit('is_online', '🔵 <i>' + socket.username + ' join the chat..</i>');
     });
+    //disconnected user 
 
     socket.on('disconnect', function(username) {
         io.emit('is_online', '🔴 <i>' + socket.username + ' left the chat..</i>');
